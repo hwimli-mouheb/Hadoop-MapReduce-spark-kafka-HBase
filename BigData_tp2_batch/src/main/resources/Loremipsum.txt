@@ -1,0 +1,33 @@
+Lorem ipsum dolor sit amet, est eu eripuit dolorem. Feugait civibus gloriatur usu ex, pri invidunt lobortis rationibus eu. Ei eros propriae ius, ei pro complectitur consectetuer. Id sea eros quaestio, clita dictas impetus an pro, his delenit suscipit liberavisse ut.Qui hinc mundi officiis at, dolor dicant recteque ne sea, augue eirmod latine no nam. Eu quas laboramus reprehendunt eos, impedit lobortis adipiscing sit ne, sit clita iudicabit mnesarchum ei. Usu ex veniam intellegat forensibus. Ad per ignota integre fabellas. Duo an percipit praesent, his hinc graeci ad, eam ex debet ornatus.Usu feugiat appetere et, pro veniam docendi ut, est eu cetero repudiandae. Ex est ceteros eligendi. Duo mazim congue te, mel id case quando. An nulla pertinacia concludaturque ius. An vel minim libris melius, odio aperiri an eam.Has congue volumus persequeris ne. An has diam dissentias. Mea phaedrum sententiae ex, eu cum solet admodum phaedrum. Vix cu possim consectetuer, tamquam alterum civibus te his, eu per veniam eripuit.Vel viderer platonem cu, ex usu verterem incorrupte consectetuer. Errem dolores ut nam, dolore dolorum similique ne sit, ei per solet probatus. Persius facilisi consetetur eam eu, nec id justo liber, utamur saperet hendrerit ex sit. Mea an nominati facilisis, ad malis munere maiestatis mea. Sumo iudicabit pro an. Salutandi iracundia vel ex, his in probatus vulputate. Dico probatus interesset ea pro.
+
+spark-submit  --class tn.insat.tp21.WordCountTask --master local --driver-memory 4g --executor-memory 2g --executor-cores 1 wordcount-1.jar input/purchases.txt output
+
+  spark-submit  --class tn.insat.tp21.WordCountTask --master yarn --deploy-mode cluster --driver-memory 4g --executor-memory 2g --executor-cores 1 wordcount-1.jar input/purchases.txt output2
+
+
+ DAGScheduler: Submitting ResultStage 548 (ShuffledRDD[548] at reduceByKey at Stream.java:29), which has no missing parents
+23/03/02 18:10:12 INFO MemoryStore: Block broadcast_278 stored as values in memory (estimated size 3.7 KB, free 912.2 MB)
+23/03/02 18:10:12 INFO MemoryStore: Block broadcast_278_piece0 stored as bytes in memory (estimated size 2.1 KB, free 912.1 MB)
+23/03/02 18:10:12 INFO BlockManagerInfo: Added broadcast_278_piece0 in memory on 172.20.10.5:65425 (size: 2.1 KB, free: 912.3 MB)
+23/03/02 18:10:12 INFO SparkContext: Created broadcast 278 from broadcast at DAGScheduler.scala:1006
+23/03/02 18:10:12 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 548
+
+
+
+
+
+MemoryStore: Block broadcast_389 stored as values in memory (estimated size 3.7 KB, free 912.1 MB)
+23/03/02 18:11:05 INFO MemoryStore: Block broadcast_389_piece0 stored as bytes in memory (estimated size 2.1 KB, free 912.1 MB)
+23/03/02 18:11:05 INFO BlockManagerInfo: Added broadcast_389_piece0 in memory on 172.20.10.5:65425 (size: 2.1 KB, free: 912.2 MB)
+23/03/02 18:11:05 INFO SparkContext: Created broadcast 389 from broadcast at DAGScheduler.scala:1006
+23/03/02 18:11:05 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 760 (ShuffledRDD[760] at reduceByKey at Stream.java:29) (first 15 tasks are for partitions Vector(1, 2, 3))
+23/03/02 18:11:05 INFO TaskSchedulerImpl: Adding task set 760.0 with 3 tasks
+
+ spark-submit  --class tn.insat.tp21.WordCountTask --master local --driver-memory 4g --executor-memory 2g --executor-cores 1 wordcount-1.jar input/purchases.txt output
+
+
+spark-submit --class tn.insat.tp22.Stream --master local --driver-memory 4g --executor-memory 2g --executor-cores 1 stream-1.jar
+
+
+
+
